@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div id="login-form-wrap">
+        <h2>Login</h2>
+        <form id="login-form">
+          <p>
+          <input type="text" id="username" name="username" placeholder="Username" required><span></span><span></span></i>
+          </p>
+          <p>
+          <input type="password" id="password" name="password" placeholder="Password" required><span></span><span></span></i>
+          </p>
+          <p>
+          <button type="button" id="login" onclick="checkCredentials()">Login</button>
+          </p>
+        </form>
+        <div id="create-account-wrap">
+          <p>Not a member? <a href="#">Create Account</a><p>
+        </div>
+      </div>
+
+
+    <script>
+        function checkCredentials() {
+            var enteredUsername = document.getElementById('username').value;
+            var enteredPassword = document.getElementById('password').value;
+
+            // Hardcoded credentials for demonstration purposes
+            var hardcodedUsername = "Jason";
+            var hardcodedPassword = "1234";
+
+            if (enteredUsername === hardcodedUsername && enteredPassword === hardcodedPassword) {
+                window.location.href='../html/index.html';
+                // Redirect to another page or perform desired action
+            } else {
+                alert("Login failed. Please check your credentials.");
+            }
+        }
+    </script>
+</body>
+</html>
